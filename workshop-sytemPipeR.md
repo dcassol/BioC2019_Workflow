@@ -25,7 +25,7 @@ Non-essential background reading:
 
 ## Workshop Participation
 
-Participants will be able to perform all analysis components of this workshop hands-on. Active user participation in all forms throughout the event is highly encouraged including but not limited to lecture material, hands-on sections and final discussion about package improvements. Most likely, the final computer cluster example will be demonstrated by the presenter rather than performed by all participants, because the AMI instances provided during the conference are unlikely to provide cluster/scheduler support.  
+Participants will be able to perform all analysis components of this workshop hands-on. Active user participation throughout the event is highly encouraged including but not limited to lecture material, hands-on sections and final discussion about package improvements. Most likely, the final computer cluster example will be demonstrated by the presenter rather than performed by all participants, because the AMI instances provided during the conference are unlikely to provide cluster/scheduler support.  
 
 ## _R_ / _Bioconductor_ packages used
 
