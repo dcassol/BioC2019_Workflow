@@ -1,4 +1,4 @@
-# BioC2019_Workflow
+# BioC2019_Workshop
 
 Workshop proposal for [BioC2019](https://bioc2019.bioconductor.org/)
 
