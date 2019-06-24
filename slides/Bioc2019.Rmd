@@ -48,13 +48,6 @@ output:
   - Uniform sample handling and annotation
   - Automated report generation
   - Flexibility to support custom changes and new software/tools
-  
-<!--
-so de goal is not only to create pipelines reproducible and efficient but has developed a workflow environment building;
-workflow environment building;
-community stander to generated the param files;
-not only ngs any more
--->
 
 ## *systemPipeR* {#Advantages_bk}
 
@@ -64,10 +57,10 @@ not only ngs any more
 
 [.](#Advantages)
 
-
 ## Adopting CWL
 
 <div id="left">
+
 <top><img src="./images/cwl_systemPipeR.png" align="left" alt="Drawing" style="width: 400px;"/><top>
 
 </div>
@@ -82,21 +75,16 @@ not only ngs any more
       - Other languages 
   - Support resources for containerization, parallel evaluations on computer clusters
   - Can be applying for any tools/software
-</div>
 
+</div>
 
 ## Advantages {#CWL_bk}
 
-- Using CWL to generated *systemPipeR* param files: command-line and workflow definition [format](#CWL)
-- Flexible debugging process for all the steps
-- Allows complex experimental design: using *targets* files
-- Downstream visualization report: integration of workflow plot and data analysis report
-- Sharing of workflows with related environments (e.g., Galaxy or Snakemake)
-  
-<!--
-In an ‘R-centric’ rather than a ‘CWL-centric’ workflow design the connectivity among workflow steps is established by writing all relevant output with the writeTargetsout function to a new targets file that serves as input to the next loadWorkflow and renderWF call. By chaining several  SYSargs2 steps together one can construct complex workflows involving many sample-level input/output file operations with any combination of command-line or R-based software. Alternatively, a CWL-centric workflow design can be used that defines all/most workflow steps with CWL workflow and parameter files-
-
--->
+  - Using CWL to generated *systemPipeR* param files: command-line and workflow definition [format](#CWL)
+  - Flexible debugging process for all the steps
+  - Allows complex experimental design: using *targets* files
+  - Downstream visualization report: integration of workflow plot and data analysis report
+  - Sharing of workflows with related environments (e.g., Galaxy or Snakemake)
 
 # Design
 
@@ -108,7 +96,7 @@ In an ‘R-centric’ rather than a ‘CWL-centric’ workflow design the connec
 - [CWL](#CWL) design 
 - [*SYSargs2*](#sysargs2) generation 
 
-##
+## Workflow design in *systemPipeR*
 
   - *`SYSargs2`* S4 class is a list-like container 
   - Workflow steps operations are controlled by *`SYSargs2`* instances
@@ -481,6 +469,7 @@ with the `BiocParallel` package, here using 8 CPU cores. [Return](#read_bk) </h4
 
 ```{r read_counting1, eval=FALSE}
 library("GenomicFeatures"); library(BiocParallel)
+args <- systemArgs(sysma="param/hisat2.param", mytargets="targets.txt")
 txdb <- makeTxDbFromGFF(file="data/tair10.gff", format="gff",
                         dataSource="TAIR", organism="Arabidopsis thaliana")
 saveDb(txdb, file="./data/tair10.sqlite")
