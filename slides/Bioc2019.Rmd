@@ -1,7 +1,7 @@
 ---
 title: _`systemPipeR's`_ </br><small>New CWL Command-line Interface</small>
-author: <small>Daniela Cassol (danielac@ucr.edu)</small>
-date: "`r format(Sys.time(), '%d %B, %Y')`" 
+author: <small>Daniela Cassol (danielac@ucr.edu) </br> Thomas Girke (thomas.girke@ucr.edu)</small>
+date: "24 June, 2019" 
 bibliography: bibtex.bib
 output:
   revealjs::revealjs_presentation:
@@ -245,13 +245,19 @@ output(align)[1]
 ##
 <center><img src="./images/SYSargs2_rnaseq.png" align="center" alt="Drawing"/><center>
 
-
 ## Read Preprocessing {#filter_bk}
 
-- [Read quality filtering and trimming](#filter)
-- [FASTQ quality report](#quality)
+<div id="left">
+<center><img src="./images/fastqReport.png" align="center" alt="Drawing" style="width: 200px;"/><center>
 
-![](images/fastqReport.png)
+</div>
+
+<div id="right"><br>
+
+  - [Read quality filtering and trimming](#filter)
+  - [FASTQ quality report](#quality)
+  
+</div>
 
 ## Read mapping with *Hisat2*
  - The NGS reads of this project will be aligned against the reference genome sequence using  Hisat2 [@Kim2015-ve]. 
